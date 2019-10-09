@@ -1,5 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import {
+    Button
+} from 'react-bootstrap';
 import {
     cardDesign,
     cardContext,
@@ -31,11 +35,11 @@ class Card extends React.Component {
 
     handleReadMore = id => {
 
-        const {
-            postSelectedAct
-        } = this.props;
-
-        postSelectedAct(id);
+        // const {
+        //     postSelectedAct
+        // } = this.props;
+        //
+        // postSelectedAct(id);
         //window.location.href = '/details/' + id;
     };
 
@@ -51,7 +55,7 @@ class Card extends React.Component {
             getSelectedPostIdSlc
         } = this.props;
 
-        let link = "/details/" + getSelectedPostIdSlc;
+        let link = "/details/" + (cardId - 1);
 
         return(
             <div className="col-sm-4">
@@ -72,13 +76,13 @@ class Card extends React.Component {
                     </div>
 
                     <div className="card-footer">
-                        <button
+                        <Button
                             type="button"
                             className="btn btn-sm btn-secondary"
-                            onClick={() => this.handleReadMore(cardId)}
+                            //onClick={() => this.handleReadMore(cardId)}
                         >
-                            <a href={link} style={readMoreStyle}>Read More</a>
-                        </button>
+                            <Link to={link} style={readMoreStyle}>Read More</Link>
+                        </Button>
                     </div>
                 </div>
             </div>
