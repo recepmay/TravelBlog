@@ -14,7 +14,7 @@ No copyright issues! :)
 file using Node.js in order to handle image upload process while creating a new blog
 post. In order to run backend service please go to: \TravelBlog and run "node backend.js"
 
-- Backend service will be runnin using portnumber 4000 and upload requests will be sent to 
+- Use "node backend.js". Backend service will be running using portnumber 4000 and upload requests will be sent to 
 this service. Uploaded images will be stored in \TravelBlog\public\images
 
 - I tried to access a local file stored in \Constants\blogEntries.json with Node.js again
