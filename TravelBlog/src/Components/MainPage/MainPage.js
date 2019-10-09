@@ -40,10 +40,12 @@ class MainPage extends React.Component {
 
     componentDidMount() {
         const {
-            getBlogPostsAct
+            getBlogPostsAct,
+            clearFilteredBlogPostsAct
         } = this.props;
 
         getBlogPostsAct();
+        clearFilteredBlogPostsAct();
     }
 
     handleSearchInput = (e) => {
@@ -141,7 +143,8 @@ class MainPage extends React.Component {
     render() {
         const {
             getFilteredBlogPostsSlc,
-            getBlogPostsSlc
+            getBlogPostsSlc,
+            getSearchInputSlc
         } = this.props;
 
         return(
@@ -174,7 +177,7 @@ class MainPage extends React.Component {
                         : null
                     }
                     <div className="row">
-                        {getFilteredBlogPostsSlc.length > 0
+                        { getSearchInputSlc.length > 0 && getFilteredBlogPostsSlc.length > 0
                             ? this.cardViewFiltered()
                             : this.cardViewAll()
                         }
