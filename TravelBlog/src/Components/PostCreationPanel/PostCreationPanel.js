@@ -62,11 +62,11 @@ class PostCreationPanel extends React.Component {
     }
 
     componentDidMount() {
-        const {
-            getBlogPostsAct
-        } = this.props;
-
-        getBlogPostsAct();
+        // const {
+        //     getBlogPostsAct
+        // } = this.props;
+        //
+        // getBlogPostsAct();
     }
 
     handleTitleChange = (e) => {
