@@ -26,13 +26,13 @@ class Categories extends React.Component {
     }
 
     componentDidMount() {
-        // const {
-        //     getBlogPostsAct,
-        //     clearFilteredBlogPostsAct
-        // } = this.props;
+        const {
+            getBlogPostsAct,
+            clearFilteredBlogPostsAct
+        } = this.props;
 
         //getBlogPostsAct();
-        // clearFilteredBlogPostsAct();
+        clearFilteredBlogPostsAct();
     }
 
     categoriesCollection = () => {
