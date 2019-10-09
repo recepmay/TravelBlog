@@ -40,15 +40,15 @@ class PostDetails extends React.Component {
     }
 
     componentDidMount() {
-        const {
-            getBlogPostsAct
-        } = this.props;
-
-        getBlogPostsAct();
+        // const {
+        //     getBlogPostsAct
+        // } = this.props;
+        //
+        // getBlogPostsAct();
     }
 
     handleGoBack = () => {
-        window.location.href = document.referrer;
+        window.history.back();
     };
 
     handleDeleteBlogPost = postId => {
@@ -79,7 +79,7 @@ class PostDetails extends React.Component {
         let postId = currentURL.split("/").slice(-1)[0];
 
         for (let post of getBlogPostsSlc) {
-            if (post.id === parseInt(postId)) {
+            if ((post.id - 1) === parseInt(postId)) {
                 selectedPost = post;
             }
         }
