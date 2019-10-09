@@ -26,13 +26,13 @@ class Categories extends React.Component {
     }
 
     componentDidMount() {
-        const {
-            getBlogPostsAct,
-            clearFilteredBlogPostsAct
-        } = this.props;
+        // const {
+        //     getBlogPostsAct,
+        //     clearFilteredBlogPostsAct
+        // } = this.props;
 
-        getBlogPostsAct();
-        clearFilteredBlogPostsAct();
+        //getBlogPostsAct();
+        // clearFilteredBlogPostsAct();
     }
 
     categoriesCollection = () => {
@@ -41,7 +41,7 @@ class Categories extends React.Component {
         } = this.props;
 
         let categoryItems = [];
-        let reducedCategoryItems = [];
+        // let reducedCategoryItems = [];
 
         //to set components width to align
         const colourStyles = {
@@ -61,17 +61,25 @@ class Categories extends React.Component {
         //remove the same tags to have unique values
         categoryItems = [...new Set(categoryItems)];
 
-        for (let tag of categoryItems) {
-            let temp = {
+        // for (let tag of categoryItems) {
+        //     let temp = {
+        //         value: tag,
+        //         label: tag
+        //     };
+        //     reducedCategoryItems.push(temp);
+        // }
+
+        const reducedCategoryItems = categoryItems.map(tag => {
+            return {
                 value: tag,
                 label: tag
-            };
-            reducedCategoryItems.push(temp);
-        }
+            }
+        });
+
 
         return(
             <Select
-                defaultValue={[reducedCategoryItems[2], reducedCategoryItems[0]]}
+                //defaultValue={[reducedCategoryItems[2], reducedCategoryItems[0]]}
                 isMulti
                 name="colors"
                 options={reducedCategoryItems}
