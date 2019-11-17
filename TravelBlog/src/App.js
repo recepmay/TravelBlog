@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import {connect} from 'react-redux';
-import Header from './Components/MainPage/Header';
-import Banner from './Components/MainPage/Banner';
-import Footer from './Components/MainPage/Footer';
+import Header from './Components/Header/Header';
+import Banner from './Components/Banner/Banner';
+import Footer from './Components/Footer/Footer';
 import MainPage from './Components/MainPage/MainPage';
 import PostDetails from './Components/PostDetails/PostDetails';
 import PostCreationPanel from './Components/PostCreationPanel/PostCreationPanel';
