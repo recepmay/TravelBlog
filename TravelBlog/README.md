@@ -1,8 +1,6 @@
 
 - This assignment is about using the React library to create a Travel Blog.
 
-- Time limitation was given for this assignment so it has been completed in 4 days.
-
 - All the photos that has been used in this project has been taken by me during my travels.
 No copyright issues! :)
 
